@@ -1,6 +1,4 @@
 import axios from "axios";
-import { response } from "express";
-import { result } from "lodash";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = "bd70587ffb8347f1a10c97b1c5e259bd";

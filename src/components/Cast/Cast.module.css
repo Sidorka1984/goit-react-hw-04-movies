@@ -1,0 +1,23 @@
+.list {
+  width: 100%;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: -20px;
+  min-height: 450px;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 200px;
+  margin: 15px;
+}
+
+.character {
+  font-style: italic;
+  font-size: 17px;
+}
