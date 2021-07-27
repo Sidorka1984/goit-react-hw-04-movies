@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import MovieList from "../../components/MovieList/MovieList";
 import Loader from '../../components/Loader/Loader';
 import api from '../../services/api.js';
-import { Toaster } from "react-hot-toast";
+import {toast, Toaster } from "react-hot-toast";
 const HomePage = () => {
     const [trends, setTrends] = useState([]);
     const [isLoading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
 
     useEffect(() => {
         fetchData();
@@ -18,8 +18,8 @@ const HomePage = () => {
             const movies = await api.fetchTrends();
             setTrends(movies);
         } catch (error) {
-            console.error('Smth wrong with homepage trends fetch', error);
-            setError(error);
+            toast.error('Smth wrong with homepage trends fetch', error);
+            
         } finally {
             setLoading(false);
         }

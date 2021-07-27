@@ -1,0 +1,13 @@
+.list {
+  margin-bottom: 20px;
+}
+
+.item {
+  padding: 20px;
+  border-radius: 5px;
+
+  background-color: #f0ffff;
+}
+item:not(:last-child) {
+  margin-bottom: 20px;
+}

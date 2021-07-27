@@ -1,4 +1,5 @@
 .header {
-  border-bottom: 1px solid #ececec;
-  background-color: #eacaec;
+  border-bottom: 2px solid #e9d8d8;
+  /* background-color: #eacaec; */
+  margin-bottom: 20px;
 }
