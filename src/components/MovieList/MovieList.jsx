@@ -17,7 +17,7 @@ const MovieList = ({ movies, location }) => {
                     }}
                     >
                         <MovieItem
-                            title={title}                            
+                            title={title}
                             poster={poster_path}
                             vote={vote_average}
                         />

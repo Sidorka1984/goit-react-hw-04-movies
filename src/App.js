@@ -1,11 +1,17 @@
 // import "./App.css";
 import { Suspense, lazy } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router";
 import AppBar from "./components/AppBar/AppBar";
 import Container from "./components/Container/Container";
 import Loader from "./components/Loader/Loader.jsx";
-import HomePage from "./pages/HomePage/HomePage";
-import MoviesPage from "./pages/MoviesPage/MoviesPage";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
+
+const MovieDetailsPage = lazy(() =>
+  import("./pages/MovieDetailsPage/MovieDetailsPage.jsx")
+);
+
+const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage.jsx"));
 
 function App() {
   return (
@@ -18,6 +24,9 @@ function App() {
           </Route>
           <Route path="/movies" exact>
             <MoviesPage />
+          </Route>
+          <Route path="/movies/:movieId">
+            <MovieDetailsPage />
           </Route>
         </Switch>
       </Suspense>

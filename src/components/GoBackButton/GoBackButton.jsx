@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from './GoBackButton.module.scss';
+import styles from './GoBackButton.module.css';
 
 const GoBackButton = ({ onBack }) => (
   <button type="button" className={styles.button} onClick={onBack}>

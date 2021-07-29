@@ -40,27 +40,21 @@ const fetchMovieById = async (id) => {
 };
 
 const fetchCast = async (id) => {
-  try {
-    const { data } = await axios.get(
-      `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`
-    );
+  const response = await axios.get(
+    `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`
+  );
+  const results = await response.data.cast;
 
-    return data;
-  } catch (error) {
-    console.error("Smth wrong with fetch cast in api", error);
-  }
+  return results;
 };
 
 const fetchReviews = async (id) => {
-  try {
-    const { data } = await axios.get(
-      `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`
-    );
+  const response = await axios.get(
+    `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+  );
+  const results = await response.data.results;
 
-    return data;
-  } catch (error) {
-    console.error("Smth wrong with fetch reviews in api", error);
-  }
+  return results;
 };
 
 export default {
