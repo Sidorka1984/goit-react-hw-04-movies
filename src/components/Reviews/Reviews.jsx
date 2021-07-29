@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import api from '../../services/api.js';
 import styles from './Reviews.module.css';
 import onError from '../Error';
+import {Toaster} from 'react-hot-toast'
 
 export default function Reviews() {
     const { movieId } = useParams();
@@ -41,6 +42,7 @@ export default function Reviews() {
             ) : (
                     <p>No Reviews</p>
             )}
+            <Toaster autoClose={4000} position="top-right" />
         </div>
     )
 

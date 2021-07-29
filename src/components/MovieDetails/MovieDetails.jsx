@@ -35,7 +35,7 @@ export default function MovieDetails({ movie, url }) {
                         Genres:
                         <ul className={styles.genreList}>
                             {movie.genres && movie.genres.map((genre) => (
-                                <li key={genre.id}>{genre.name}</li>
+                                <li key={genre.id}>&#10004; {genre.name}</li>
                             ))}
                         </ul>
                     </h2>

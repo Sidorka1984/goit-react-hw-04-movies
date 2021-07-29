@@ -18,7 +18,7 @@ const HomePage = () => {
             const movies = await api.fetchTrends();
             setTrends(movies);
         } catch (error) {
-            toast.error('Smth wrong with homepage trends fetch', error);
+            toast.error('Smth wrong with homepage trends fetch');
             
         } finally {
             setLoading(false);
@@ -33,6 +33,7 @@ const HomePage = () => {
                     <Toaster autoClose={4000} position="top-right" />
             )}
             {isLoading && <Loader />}
+            <Toaster autoClose={4000} position="top-right" />
         </main>
     );
 };

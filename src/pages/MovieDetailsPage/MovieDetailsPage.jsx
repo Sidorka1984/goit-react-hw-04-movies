@@ -6,6 +6,7 @@ import GoBackButton from '../../components/GoBackButton/GoBackButton';
 import MovieDetails from '../../components/MovieDetails/MovieDetails.jsx';
 import Loader from '../../components/Loader/Loader';
 import onError from '../../components/Error';
+import { Toaster } from 'react-hot-toast';
 // import Cast from '../../components/Cast/Cast';
 // import Reviews from '../../components/Reviews/Reviews';
 
@@ -62,7 +63,7 @@ export default function MovieDetailsPage() {
                     </Route>
                 </Suspense>
             )}
-         
+         <Toaster autoClose={4000} position="top-right" />
         </>
     )
 }

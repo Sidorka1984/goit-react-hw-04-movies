@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 import Searchbar from "../../components/Searchbar/Searchbar";
 import api from '../../services/api.js';
 import LoadMoreButton from "../../components/LoadMoreButton/LoadMoreButton";
-import onError from '../../components/Error.js';
+// import onError from '../../components/Error.js';
 import MovieList from "../../components/MovieList/MovieList";
-import { toast } from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast';
 import Loader from '../../components/Loader/Loader';
 
 export default function MoviesPage() {
@@ -17,7 +17,7 @@ export default function MoviesPage() {
 
     function handleFormSubmit(searchName) {
         if (searchName.trim() === '') {
-            onError();
+            toast.error('Nothing found 🙄! Enter something, please');
             return;
         }
         resetState()
@@ -76,6 +76,7 @@ export default function MoviesPage() {
                 <LoadMoreButton onClick={getMovies} aria-label="add films" />
             )}
             {isLoading && <Loader />}
+            <Toaster autoClose={4000} position="top-right" />
         </div>
     )
 
