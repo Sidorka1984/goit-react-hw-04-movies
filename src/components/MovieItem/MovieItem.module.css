@@ -20,15 +20,3 @@
 
   font-size: 18px;
 }
-
-.vote {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 5px;
-  border-radius: 5px;
-
-  color: #ffffff;
-  background-color: #fcf8fa;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
