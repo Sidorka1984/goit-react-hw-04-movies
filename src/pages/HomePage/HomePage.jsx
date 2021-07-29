@@ -6,7 +6,7 @@ import {toast, Toaster } from "react-hot-toast";
 const HomePage = () => {
     const [trends, setTrends] = useState([]);
     const [isLoading, setLoading] = useState(false);
-    // const [error, setError] = useState('');
+ 
 
     useEffect(() => {
         fetchData();
