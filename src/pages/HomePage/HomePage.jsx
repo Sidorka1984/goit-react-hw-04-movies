@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import MovieList from "../../components/MovieList/MovieList";
 import Loader from '../../components/Loader/Loader';
 import api from '../../services/api.js';
-import {toast, Toaster } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
+import styles from "../../components/Navigation/Navigation.module.css";
+
 const HomePage = () => {
     const [trends, setTrends] = useState([]);
     const [isLoading, setLoading] = useState(false);
@@ -27,6 +29,7 @@ const HomePage = () => {
 
     return (
         <main>
+            <h2 className={styles.title}>Trending movies</h2>
             {trends ? (
                 <MovieList movies={trends} />
             ) : (

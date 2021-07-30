@@ -7,7 +7,6 @@
   font-weight: 300;
   border-radius: 5px;
   list-style: none;
-  /* background-color: #fae7f4; */
 }
 item:not(:last-child) {
   margin-bottom: 20px;

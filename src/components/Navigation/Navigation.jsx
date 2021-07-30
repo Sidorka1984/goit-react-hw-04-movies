@@ -15,7 +15,7 @@ const Navigation = () => (
                 </NavLink>
             </li>
         </ul>
-        <b className={styles.title}>Trending movies</b>
+        {/* <b className={styles.title}>Trending movies</b> */}
     </nav>
 )
 export default Navigation;

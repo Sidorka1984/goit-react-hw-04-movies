@@ -58,7 +58,7 @@ export default function MoviesPage() {
                     top: document.documentElement.scrollHeight,
                     behavior: "smooth",
                 });
-            }, 1000);
+            },2000);
         }
         if (page > 1) {
             scrollPageToEnd();
