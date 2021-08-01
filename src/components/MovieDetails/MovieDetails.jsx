@@ -1,7 +1,6 @@
 import defaultImage from '../../images/defaulte.png';
 import { NavLink } from 'react-router-dom';
 import styles from './MovieDetails.module.css';
-import MoviesPage from '../../pages/MoviesPage/MoviesPage';
 
 export default function MovieDetails({ movie, url }) {
     return (
@@ -19,7 +18,7 @@ export default function MovieDetails({ movie, url }) {
                 />
                 <div className={styles.description}>
                     <h2 className={styles.title}>
-                        {MoviesPage.title && movie.original_name}
+                        {movie.title && movie.original_name}
                         {movie.title}
                         {movie.release_date && (
                              <span> ({movie.release_date.slice(0, 4)})</span>
