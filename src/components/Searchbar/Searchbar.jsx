@@ -28,4 +28,4 @@ const Searchbar = ({ onSearch }) => {
     )
   }
 
-export default Searchbar
+export default Searchbar;
